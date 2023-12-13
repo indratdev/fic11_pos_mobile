@@ -1,3 +1,4 @@
+import 'package:fic11_pos_mobile/presentation/home/home_screen.dart';
 import 'package:fic11_pos_mobile/shared/utils/color/custom_color.dart';
 import 'package:flutter/material.dart';
 
@@ -62,7 +63,6 @@ class OnBoardingScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    onPressed: () {},
                     child: Text(
                       'MULAI',
                       textAlign: TextAlign.center,
@@ -72,6 +72,14 @@ class OnBoardingScreen extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
+                    onPressed: () {
+                      Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomeScreen(),
+                          ),
+                          (route) => false);
+                    },
                   ),
                 )
               ],
